@@ -2,7 +2,7 @@
 
 A small home for code, analysis, and knowledge work. Start with a question and grow the structure as the work becomes real.
 
-[starter.tomspencer.co](https://starter.tomspencer.co) is the one-page introduction.
+[starter.tomspencer.co](https://starter.tomspencer.co) hosts the introduction. This branch expands it into an overview, an essay, and a getting-started guide; the current website changes are local until published.
 
 ## Start a project
 
@@ -59,7 +59,7 @@ Add `src/` for one codebase, or `apps/<name>/` when independent apps actually ex
 
 ## Keep it healthy
 
-The landing page uses Next.js and Motion Primitives. Run it with `npm ci` then `npm run dev`; verify with `npm run build` and `npm run typecheck`. It deploys through the existing Vercel project from `main`. The scaffold command excludes the website and its dependencies from generated projects.
+The editorial website uses Next.js, Motion Primitives, and stripped shadcn/ui primitives. Run it with `npm ci` then `npm run dev`; verify with `npm run build` and `npm run typecheck`. The existing Vercel project deploys from `main`; a local build does not update the public site. The scaffold command excludes the website and its dependencies from generated projects.
 
 ```sh
 python3 scripts/check_docs.py
@@ -80,3 +80,5 @@ See the [original objective](docs/product-specs/starter-objective.md), the [impl
 The [template workflow](template/docs/WORKFLOW.md) guides agents to establish an outcome, inspect the baseline, act within scope, verify the result, review failures, and update useful knowledge. The initial brief carries the working agreement; substantial plans carry shared ownership and handoffs. Tools and checks are added for the first real result, with no mandatory plugins, hooks, or background agents.
 
 Read the [section-by-section harness review](reports/harness-workflow-review.md) for the original diagrams, adaptations, implementation evidence, and limits. Instructions establish conventions; project-specific checks and observed agent runs establish whether they work.
+
+The [website research](reports/website-research.md) maps the sources, content, and component provenance for the editorial redesign.

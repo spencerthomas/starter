@@ -6,7 +6,7 @@ This repository distributes a starter. Its website and descriptions are separate
 | --- | --- |
 | [template/](template/) | Portable project defaults: docs, work folders, agent instructions, documentation checker and CI |
 | [scripts/scaffold.py](scripts/scaffold.py), [skills/start-project/](skills/start-project/) | Deliver the template and tailor the README, brief, and catalogs |
-| [src/app/](src/app/), [src/components/](src/components/) | Next.js introductory website and its animation; root npm and Vercel config serve this site |
+| [src/app/](src/app/), [src/components/](src/components/) | Next.js overview, essay, getting-started guide, and interactive diagrams; root npm and Vercel config serve this site |
 | [docs/](docs/), [reports/](reports/), [data/](data/) | Distribution intent, decisions, assessments, and source provenance |
 | [tests/](tests/), [.github/workflows/](.github/workflows/) | Distribution verification, including generated-project portability and isolation |
 
@@ -19,3 +19,5 @@ Generated-project architecture is defined in [the template architecture](templat
 The website remains at its existing build location; it has no API, database, or authentication. Keeping one repository avoids a separate template release/synchronization process. GitHub's template button copies the distribution, so the generator or shared skill is the recommended creation path.
 
 See the [adopted decision](docs/design-docs/template-and-workflow.md) and [article review](reports/harness-workflow-review.md) for rationale and evidence.
+
+Website routes live in `src/app/`. Shared navigation, copy controls, and interactive diagrams live in `src/components/site/`; the small button/tabs primitives live in `src/components/ui/`. Project examples and essay content live in `src/lib/`. Website visual rules live in [design](docs/DESIGN.md), with behavior and validation in [frontend](docs/FRONTEND.md). These do not alter template defaults.

@@ -1,0 +1,17 @@
+{
+  "reviewed": "2026-09-09",
+  "head": "d2f64312c40880f52f337b8f31b806798e2a2085",
+  "scope": "working tree; website uncommitted",
+  "files": {
+    "src/lib/essay.ts": "90631d2fe0cdd948f29719c66b16f30040d0fe60266be4c47aecfe0015710cdd",
+    "src/app/why-starter/page.tsx": "a727962cd62f99cfc40b0cb5e91ccfc0f86ba10515847cd298a8dd185d67a982",
+    "src/lib/project.ts": "010b0d658c1f8b3c0599896d1dbfde0c7f3bd99f2222df54be83b7fbd11b15c9",
+    "src/components/site/diagrams.tsx": "b262102985408943f60277a8b6cb480f1ef2040f5cdd4e076a18d6e104bff705",
+    "scripts/scaffold.py": "66cabd1ae019b3da26904aca86d1449ebe908a23c81c6548ce130f1a228ef5b9",
+    "template/scripts/check_docs.py": "3165217ccf02840a1ea63cce2a3ca1803b34fc9ed5b335e734604df424e5b92f",
+    "template/AGENTS.md": "f229088082363ad1647374e583bb5fa2cc57a746c392c9d4bc1c72713fbd47f0",
+    "template/docs/WORKFLOW.md": "bdf59171ca662db505855cce0169675d4493fce71bcb3dfee74d2f4d19e16405",
+    "template/.github/workflows/docs.yml": "0b4fd9113567743c661e190dd616cae5e06458f503db7b378459e20e13a1a039",
+    "tests/test_starter.py": "d80ac26bbe4d5e0eebad8a6540f1b1ce8677e1461dcc1c78a4ab5530b0d91cbe"
+  }
+}

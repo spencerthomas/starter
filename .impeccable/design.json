@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-09T20:16:06.381365+00:00",
+  "title": "Design System: Starter",
+  "extensions": {
+    "colorMeta": {
+      "green": {
+        "role": "primary",
+        "displayName": "Forest green"
+      },
+      "deep": {
+        "role": "primary",
+        "displayName": "Deep forest"
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Leaf selection"
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Pale page"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Homepage hero; route-specific overrides remain in CSS."
+      },
+      "code": {
+        "displayName": "Technical text",
+        "purpose": "Commands and repository paths."
+      }
+    },
+    "shadows": [
+      {
+        "name": "outline-border",
+        "value": "inset 0 0 0 1px var(--line)",
+        "purpose": "Outline button stroke, not elevation."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Text-link arrow movement."
+      },
+      {
+        "name": "control-state",
+        "value": "0.2s",
+        "purpose": "Button colors and disclosure changes."
+      },
+      {
+        "name": "nav-marker",
+        "value": "0.25s",
+        "purpose": "Shared-layout active-route marker; zero under reduced motion."
+      },
+      {
+        "name": "loop-orbit",
+        "value": "0.5s",
+        "purpose": "Selected-stage orbit tween; zero under reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide-hero-min",
+        "value": "1450px"
+      },
+      {
+        "name": "compact-max",
+        "value": "1000px"
+      },
+      {
+        "name": "mobile-max",
+        "value": "700px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Local Button primitive primary variant.",
+      "html": "<button class=\"ds-button-primary\">Start a project</button>",
+      "css": ".ds-button-primary{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:46px;padding:11px 19px;border:0;border-radius:6px;font:500 14px/1.3 Geist,sans-serif;cursor:pointer;transition:background .2s,color .2s;background:var(--green,#245749);color:white;}.ds-button-primary:hover{background:#163f33;}.ds-button-primary:focus-visible{outline:2px solid var(--green,#245749);outline-offset:5px;border-radius:3px}.ds-button-primary:disabled{opacity:.5;cursor:not-allowed}"
+    },
+    {
+      "name": "Outline button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Local Button primitive outline variant.",
+      "html": "<button class=\"ds-button-outline\">Start a project</button>",
+      "css": ".ds-button-outline{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:46px;padding:11px 19px;border:0;border-radius:6px;font:500 14px/1.3 Geist,sans-serif;cursor:pointer;transition:background .2s,color .2s;background:transparent;box-shadow:inset 0 0 0 1px var(--line,#d6ddd5);}.ds-button-outline:hover{background:var(--pale,#e4ece1);}.ds-button-outline:focus-visible{outline:2px solid var(--green,#245749);outline-offset:5px;border-radius:3px}.ds-button-outline:disabled{opacity:.5;cursor:not-allowed}"
+    },
+    {
+      "name": "Ghost button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Local Button primitive ghost variant.",
+      "html": "<button class=\"ds-button-ghost\">Start a project</button>",
+      "css": ".ds-button-ghost{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:46px;padding:11px 19px;border:0;border-radius:6px;font:500 14px/1.3 Geist,sans-serif;cursor:pointer;transition:background .2s,color .2s;background:transparent;color:var(--ink,#19231f);}.ds-button-ghost:hover{background:var(--pale,#e4ece1);}.ds-button-ghost:focus-visible{outline:2px solid var(--green,#245749);outline-offset:5px;border-radius:3px}.ds-button-ghost:disabled{opacity:.5;cursor:not-allowed}"
+    },
+    {
+      "name": "Route navigation",
+      "kind": "nav",
+      "description": "Visible three-route navigation with an active underline.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"/\" aria-current=\"page\">Overview</a><a href=\"/why-starter\">The idea</a><a href=\"/getting-started\">Get started</a></nav>",
+      "css": ".ds-nav{display:flex;gap:32px;font:14px Geist,sans-serif}.ds-nav a{position:relative;padding:12px 0;text-decoration:none;color:var(--muted,#58635b)}.ds-nav a[aria-current]{color:var(--ink,#19231f)}.ds-nav a[aria-current]:after{content:\"\";position:absolute;bottom:5px;left:0;right:0;height:2px;background:var(--green,#245749)}.ds-nav a:hover{text-decoration-color:var(--green,#245749)}.ds-nav a:focus-visible{outline:2px solid var(--green,#245749);outline-offset:5px;border-radius:3px}"
+    },
+    {
+      "name": "Start option tabs",
+      "kind": "custom",
+      "refersTo": "tab-active",
+      "description": "Static selected-state specimen; live Radix keyboard behavior is in the app.",
+      "html": "<div class=\"ds-tabs\" role=\"tablist\" aria-label=\"Starting point\"><button role=\"tab\" aria-selected=\"true\">Analysis</button><button role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">A feature</button><button role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Research</button></div>",
+      "css": ".ds-tabs{display:flex;flex-wrap:wrap;gap:8px;padding-bottom:8px;border-bottom:1px solid var(--line,#d6ddd5)}.ds-tabs button{border:0;background:transparent;color:var(--muted,#58635b);padding:10px 13px;border-radius:5px;font:13px/1.5 Geist,sans-serif;transition:background .15s;cursor:pointer}.ds-tabs button[aria-selected=\"true\"]{background:var(--ink,#19231f);color:var(--paper,#f5f6f4)}.ds-tabs button:hover:not([aria-selected=\"true\"]){background:#d8e2d3}.ds-tabs button:focus-visible{outline:2px solid var(--green,#245749);outline-offset:5px;border-radius:3px}"
+    },
+    {
+      "name": "Copy block",
+      "kind": "custom",
+      "refersTo": "copy-block",
+      "description": "Copyable prose panel; static specimen does not access clipboard.",
+      "html": "<div class=\"ds-copy\"><div class=\"ds-toolbar\"><span>Prompt for your agent</span><button>Copy</button></div><pre tabindex=\"0\">Read the project brief and follow the repository workflow.</pre></div>",
+      "css": ".ds-copy{border-radius:8px;background:#e9ede7;overflow:hidden;font:11px Geist,sans-serif;color:#5b6758}.ds-toolbar{display:flex;align-items:center;justify-content:space-between;padding:10px 13px 8px 22px;border-bottom:1px solid #d3dccf}.ds-toolbar button{border:0;background:transparent;color:#3b503e;padding:7px 10px;min-height:36px;border-radius:6px;font:500 12px/1.3 Geist,sans-serif;cursor:pointer;transition:background .2s}.ds-toolbar button:hover{background:var(--pale,#e4ece1)}.ds-toolbar button:focus-visible{outline:2px solid var(--green,#245749);outline-offset:5px;border-radius:3px}.ds-copy pre{margin:0;padding:24px 22px;white-space:pre-wrap;overflow-wrap:anywhere;font:17px/1.7 Geist,sans-serif;color:#294631}.ds-copy pre:focus-visible{outline:2px solid var(--green,#245749);outline-offset:5px;border-radius:3px}"
+    },
+    {
+      "name": "Repository disclosure",
+      "kind": "custom",
+      "description": "Expanded repository row; native details supplies a standalone disclosure specimen.",
+      "html": "<details class=\"ds-explorer\" open><summary>The project\u2019s memory</summary><p>Intent, decisions, plans, and the evidence worth keeping.</p><code>docs/</code></details>",
+      "css": ".ds-explorer{border-bottom:1px solid var(--line,#d6ddd5);padding:24px 0;color:var(--ink,#19231f)}.ds-explorer summary{font:21px/1.35 Geist,sans-serif;letter-spacing:-.02em;cursor:pointer;padding:8px 0}.ds-explorer summary:hover{color:var(--green,#245749)}.ds-explorer summary:focus-visible{outline:2px solid var(--green,#245749);outline-offset:5px;border-radius:3px}.ds-explorer p{font:15px/1.75 Geist,sans-serif;color:var(--muted,#58635b);max-width:54ch;margin:15px 0}.ds-explorer code{font:12px var(--font-geist-mono,monospace);color:var(--green,#245749)}"
+    },
+    {
+      "name": "Selected atlas node",
+      "kind": "custom",
+      "refersTo": "atlas-node-selected",
+      "description": "Selected context state inside the dark atlas field.",
+      "html": "<div class=\"ds-atlas\"><button class=\"ds-node\" aria-pressed=\"true\"><strong>Context</strong><span>Brief \u00b7 decisions \u00b7 sources</span></button></div>",
+      "css": ".ds-atlas{padding:24px;background:var(--deep,#173d33);border-radius:12px}.ds-node{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:10px;min-height:135px;width:100%;text-align:left;padding:22px;border:1px solid var(--accent,#c8ddba);border-radius:7px;background:var(--accent,#c8ddba);color:#153e31;cursor:pointer;transition:color .2s,background .2s,border-color .2s}.ds-node strong{font:500 17px Geist,sans-serif}.ds-node span{font:11px/1.4 Geist,sans-serif;color:#36523c}.ds-node:hover{border-color:#e2ecde}.ds-node:focus-visible{outline:2px solid #e2ecde;outline-offset:5px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Systems atlas (provisional implemented direction)",
+    "overview": "A pale editorial website with dark-green interactive diagrams, substantial Geist headings, and restrained controls. Extracted from local built source and review captures; not an approved comp, standing user preference, or publication claim.",
+    "keyCharacteristics": [
+      "Spacious technical publishing",
+      "Explicit diagram relationships and selected states",
+      "Flat surfaces and state-driven motion"
+    ],
+    "rules": [],
+    "dos": [
+      "Do retain captions, connectors, and keyboard focus on mobile.",
+      "Do preserve state feedback under reduced motion.",
+      "Do keep product claims grounded in sources."
+    ],
+    "donts": [
+      "Do not treat the provisional direction as a confirmed user preference.",
+      "Do not add simulated paper, ambient shadows, or unused component families."
+    ]
+  }
+}

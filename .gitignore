@@ -21,3 +21,8 @@ coverage/
 /data/**
 !/data/README.md
 !/data/manifest.md
+
+# Local design review captures and browser sessions
+/.impeccable/review/
+/.impeccable/questions/
+/.playwright-mcp/

@@ -1,0 +1,232 @@
+{
+  "title": "A website for understanding Starter",
+  "question": "The systems atlas gives the overview, essay, and guide one coherent visual language. Choose it, take the notebook alternate, or steer the direction.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Systems atlas",
+      "kicker": "THE DIRECTION",
+      "thesis": "A readable atlas of how a question becomes a project, with diagrams you can explore.",
+      "palette": [
+        "#f5f6f4",
+        "#17211f",
+        "#245749",
+        "#cadbc9"
+      ],
+      "materials": [
+        "open page",
+        "precise vector diagrams",
+        "quiet green annotation"
+      ],
+      "viewport": "Oversized left-aligned title above a wide live map: a brief, project knowledge, work, and evidence.",
+      "risk": "Diagrams must explain real relationships, never become decorative complexity.",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {
+            "label": "Starter / navigation",
+            "x": 0,
+            "y": 0,
+            "w": 12,
+            "h": 1
+          },
+          {
+            "label": "A place for the work to grow.",
+            "x": 0,
+            "y": 2,
+            "w": 8,
+            "h": 3
+          },
+          {
+            "label": "Start a project",
+            "x": 9,
+            "y": 3,
+            "w": 3,
+            "h": 2
+          },
+          {
+            "label": "The project, made legible.",
+            "x": 0,
+            "y": 6,
+            "w": 12,
+            "h": 4,
+            "accent": true
+          }
+        ]
+      },
+      "raised": [
+        {
+          "from": "Depot destination roll",
+          "raise": "Make state transitions legible without relying on color."
+        },
+        {
+          "from": "Film cutting bench",
+          "raise": "Make every intermediate state reachable."
+        },
+        {
+          "from": "Layered street flyer",
+          "raise": "Own the first viewport with one decisive composition."
+        },
+        {
+          "from": "Copy-shop essay",
+          "raise": "Give the long essay a sustained reading rhythm."
+        },
+        {
+          "from": "Assembly booklet",
+          "raise": "Show what each step adds rather than merely naming it."
+        },
+        {
+          "from": "Daylight section",
+          "raise": "Keep a clear still state for every animation."
+        }
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "Computational notebook",
+      "kicker": "ALTERNATE",
+      "thesis": "An original essay with working figures embedded directly into the argument.",
+      "palette": [
+        "#fafafa",
+        "#1f252a",
+        "#295884"
+      ],
+      "materials": [
+        "technical prose",
+        "inline demonstrations"
+      ],
+      "viewport": "Essay title, short abstract, and an executable project example before the first chapter.",
+      "risk": "A familiar developer-docs arrangement; the overview may feel secondary."
+    },
+    {
+      "id": "depot",
+      "label": "Depot destination roll",
+      "verdict": "declined",
+      "thesis": "A project stage moves into a fixed window.",
+      "palette": [
+        "#16432d",
+        "#eee4cb"
+      ],
+      "materials": [
+        "source-inspired graphic system"
+      ],
+      "viewport": "A project stage moves into a fixed window.",
+      "risk": "Its dense one-size legends hinder a long essay.",
+      "case": "Declined on reader fit and explanatory clarity.",
+      "kept": "Make state transitions legible without relying on color."
+    },
+    {
+      "id": "film",
+      "label": "Film cutting bench",
+      "verdict": "declined",
+      "thesis": "A verification sequence scrubs through frames.",
+      "palette": [
+        "#f26f21",
+        "#151515"
+      ],
+      "materials": [
+        "source-inspired graphic system"
+      ],
+      "viewport": "A verification sequence scrubs through frames.",
+      "risk": "Editing-film notation adds a metaphor to learn.",
+      "case": "Declined on reader fit and explanatory clarity.",
+      "kept": "Make every intermediate state reachable."
+    },
+    {
+      "id": "flyer",
+      "label": "Layered street flyer",
+      "verdict": "declined",
+      "thesis": "Projects assemble from overlapping source pieces.",
+      "palette": [
+        "#ff6a00",
+        "#7b57f0"
+      ],
+      "materials": [
+        "source-inspired graphic system"
+      ],
+      "viewport": "Projects assemble from overlapping source pieces.",
+      "risk": "Display spectacle obscures the practical entry path.",
+      "case": "Declined on reader fit and explanatory clarity.",
+      "kept": "Own the first viewport with one decisive composition."
+    },
+    {
+      "id": "zine",
+      "label": "Copy-shop essay",
+      "verdict": "declined",
+      "thesis": "One argument travels across a sequence of colored sheets.",
+      "palette": [
+        "#e4c860",
+        "#171717"
+      ],
+      "materials": [
+        "source-inspired graphic system"
+      ],
+      "viewport": "One argument travels across a sequence of colored sheets.",
+      "risk": "Distressed text and a fixed typing measure fight diagram exploration.",
+      "case": "Declined on reader fit and explanatory clarity.",
+      "kept": "Give the long essay a sustained reading rhythm."
+    },
+    {
+      "id": "brick",
+      "label": "Assembly booklet",
+      "verdict": "declined",
+      "thesis": "A project builds through numbered illustrated steps.",
+      "palette": [
+        "#b8d9ef",
+        "#d84232"
+      ],
+      "materials": [
+        "source-inspired graphic system"
+      ],
+      "viewport": "A project builds through numbered illustrated steps.",
+      "risk": "Wordless assembly underserves nuanced evidence and prose.",
+      "case": "Declined on reader fit and explanatory clarity.",
+      "kept": "Show what each step adds rather than merely naming it."
+    },
+    {
+      "id": "daylight",
+      "label": "Daylight section",
+      "verdict": "declined",
+      "thesis": "Useful context appears along a moving section of the project.",
+      "palette": [
+        "#f4f4e9",
+        "#dfa334"
+      ],
+      "materials": [
+        "source-inspired graphic system"
+      ],
+      "viewport": "Useful context appears along a moving section of the project.",
+      "risk": "Solar geometry implies quantitative relationships that do not exist.",
+      "case": "Declined on reader fit and explanatory clarity.",
+      "kept": "Keep a clear still state for every animation."
+    }
+  ],
+  "reroll": {
+    "registers": [
+      "safer",
+      "bolder"
+    ]
+  },
+  "buildPath": {
+    "value": "code",
+    "toggle": true
+  },
+  "canon": true,
+  "canonCard": {
+    "label": "Conventional documentation site",
+    "thesis": "A familiar docs layout with a sidebar and straightforward content.",
+    "palette": [
+      "#ffffff",
+      "#202020",
+      "#555555"
+    ],
+    "materials": [
+      "plain surfaces",
+      "standard hierarchy"
+    ],
+    "viewport": "Navigation, short overview, then a conventional documentation index.",
+    "risk": "Clear but less distinctive."
+  },
+  "steer": true
+}
