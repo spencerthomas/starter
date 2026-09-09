@@ -18,7 +18,7 @@ python3 scripts/scaffold.py ../customer-retention --kind analysis --name "Custom
 
 Kinds are `general`, `analysis`, `feature`, and `research`. They set an initial question and suggested first checks, not a fixed technology stack. The destination must be empty (an existing `.git/` is fine). Use `--dry-run` to preview. The scaffold never installs dependencies, initializes Git, or changes remotes.
 
-To use GitHub's template button, create a repo from this template, then ask the agent to tailor the README and project brief in place. Keep the starter tooling only if that project will also create new projects.
+Use the skill or generator for a minimal project. GitHub's template button copies this entire distribution, including its website and tooling; it does not extract `template/`. For an existing copy, ask the agent to adapt it deliberately without overwriting useful work.
 
 ## Use it from any project
 
@@ -43,7 +43,10 @@ Explicit invocation: `$start-project` in Codex or `/start-project` in Claude. Fo
 
 | Path | Purpose |
 | --- | --- |
-| [AGENTS.md](AGENTS.md) | Short map for agents; Claude imports it through `CLAUDE.md` |
+| [template/](template/) | Project defaults; the only source of generated project content |
+| [scripts/scaffold.py](scripts/scaffold.py) and [shared skill](skills/start-project/SKILL.md) | Tailor and deliver the template |
+| [src/app/](src/app/) | Distribution website; excluded from projects |
+| [AGENTS.md](AGENTS.md) | Map for maintaining this distribution; Claude imports it through `CLAUDE.md` |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | Boundaries, folder ownership, and how work flows |
 | [docs/](docs/) | Canonical intent, decisions, plans, references, and quality evidence |
 | [analysis/](analysis/) | Reproducible queries, notebooks, experiments, and working notes |
@@ -60,9 +63,20 @@ The landing page uses Next.js and Motion Primitives. Run it with `npm ci` then `
 
 ```sh
 python3 scripts/check_docs.py
+python3 scripts/check_docs.py template
 python3 -m unittest discover -s tests
 ```
 
 The documentation check runs in CI and weekly. It checks structure, local Markdown file links, catalog coverage, and review dates. It cannot establish factual correctness or replace project-specific tests. Update docs with the work; use [PLANS.md](docs/PLANS.md) for shared plans and handoffs.
 
 This starter adapts the repository map and feedback-loop ideas from [OpenAI's harness engineering article](https://openai.com/index/harness-engineering/) and [the harness-engineering reference repository](https://github.com/spencerthomas/harness-engineering). See [sources and adaptations](docs/references/harness-engineering.md).
+
+## Objective and assessment
+
+See the [original objective](docs/product-specs/starter-objective.md), the [implementation assessment](reports/starter-objective-assessment.md), and the [source references](docs/references/harness-engineering.md). The supplied article PDF is preserved locally with a [source manifest](data/manifest.md); the payload is ignored by Git.
+
+## How agents work in generated projects
+
+The [template workflow](template/docs/WORKFLOW.md) guides agents to establish an outcome, inspect the baseline, act within scope, verify the result, review failures, and update useful knowledge. The initial brief carries the working agreement; substantial plans carry shared ownership and handoffs. Tools and checks are added for the first real result, with no mandatory plugins, hooks, or background agents.
+
+Read the [section-by-section harness review](reports/harness-workflow-review.md) for the original diagrams, adaptations, implementation evidence, and limits. Instructions establish conventions; project-specific checks and observed agent runs establish whether they work.

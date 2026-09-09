@@ -5,4 +5,4 @@ Use this catalog for any meaningful outcome: a feature, research question, analy
 | Document | Status | Last reviewed |
 | --- | --- | --- |
 
-No project-specific specs yet. The scaffold command adds one short project brief.
+| [Starter objective](starter-objective.md) | User objective captured; acceptance partial | 2026-09-09 |

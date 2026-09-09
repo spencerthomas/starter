@@ -21,7 +21,7 @@ For a new or empty target (an existing `.git/` is allowed), run the bundled scri
 python3 /absolute/path/to/starter/scripts/scaffold.py /absolute/path/to/new-project --kind analysis --name 'Project name' --brief 'The intended outcome'
 ```
 
-Use `general`, `analysis`, `feature`, or `research` as the nearest starting point. Use `--dry-run` when a preview helps. The script copies the exact docs skeleton, working folders, and documentation check; it writes a project README and brief. It does not copy its own distribution tooling, initialize Git, install packages, or configure remotes.
+Use `general`, `analysis`, `feature`, or `research` as the nearest starting point. Use `--dry-run` when a preview helps. The script reads project defaults only from `template/`, including the portable working loop, work folders, and documentation check; it writes a project README and brief. It does not copy its own distribution tooling, initialize Git, install packages, or configure remotes.
 
 For an existing project or a GitHub template copy, inspect its instructions and files first. Do not run the generator over it or force a reset. Add missing documents deliberately and tailor the existing brief, indexes, README, and architecture without replacing useful work. Retain the requested docs layout; don't create a competing planning tree.
 
@@ -34,6 +34,12 @@ For an existing project or a GitHub template copy, inspect its instructions and 
 - Keep `docs/`, `analysis/`, `data/`, `reports/`, `presentations/`, and `outputs/`. Add other folders only for immediate work. Do not manufacture example schemas, datasets, applications, or plans.
 - Discover installed capabilities before suggesting them. Use relevant skills/plugins without making optional packages prerequisites for scaffolding.
 - For substantial or parallel work, use `docs/PLANS.md` to capture owner, write scopes, acceptance checks, and handoffs. Don't start agents just to populate a scaffold.
+
+## Establish the working agreement
+
+Read the generated `AGENTS.md` and `docs/WORKFLOW.md` before handing over or continuing. Tailor the brief's working agreement with known scope, inputs/tools, and the first observable result. Replace generic evidence text with a concrete command or inspection when known; leave unavailable access and unresolved criteria explicit. Do not invent tests, datasets, findings, or a stack to fill the fields.
+
+Use the portable loop for subsequent authorized work: inspect, act, verify, review, finish. It includes recovery and scope boundaries. Agent-specific hooks and recurring jobs are optional responses to observed friction, not scaffold dependencies. A successful generation check establishes structure only; do not claim the agent workflow or first project outcome is validated until exercised.
 
 ## Finish
 

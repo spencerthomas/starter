@@ -19,8 +19,8 @@ export default function Home() {
             <p>A repository for code, analysis, and knowledge work. A place for the context, the work in progress, and whatever comes out of it.</p>
             <p>Start with a question. Let the structure grow with the project.</p>
             <nav className="actions" aria-label="Get started">
-              <a href={`${repo}/generate`}>Use the template <span aria-hidden="true">↗</span></a>
-              <a className="quiet-link" href={`${repo}#start-a-project`}>Read the guide <span aria-hidden="true">↗</span></a>
+              <a href={`${repo}#start-a-project`}>Use the starter <span aria-hidden="true">↗</span></a>
+              <a className="quiet-link" href={`${repo}/tree/main/template`}>Browse the template <span aria-hidden="true">↗</span></a>
             </nav>
           </section>
 
