@@ -1,0 +1,321 @@
+{
+  "base": {
+    "url": "http://localhost:3100/why-starter",
+    "title": "The project is part of the prompt — Starter",
+    "text": "The project is\npart of the prompt.\n\nA small foundation for working with agents—and a way to keep the intent, evidence, and learning close to the work.\n\nTom Spencer\nSeptember 9, 2026\n7 min read\nThe project, made legible\nA question\nWhat are we trying\nto understand?\nContext\nBrief · decisions · sources\nWork\nBuild · analyze · write\nEvidence\nCheck · review · retain\nLeave the next run better informed\nContext travels with the work.\nThe question, decisions, and constraints live in the repository, ready for the next session.\nIn this essay\nBegin with a question, not a stack\nThe environment is part of the work\nGive the agent a map\nContext, work, and evidence are different things\nMake the feedback loop explicit\nBe precise about boundaries. Leave freedom inside them\nMore agents need clearer ownership\nAutonomy follows evidence and authority\nLeave the project easier to return to\nA foundation, not a finished system\nSources & further reading\n\nA good project remembers why it exists, makes its work inspectable, and gives the next person—or agent—a useful place to begin.\n\nStarter is an attempt to make that easier. It draws on the ideas in Ryan Lopopolo’s harness engineering essay and adapts them to projects that may be much smaller, less settled, or not primarily about software at all.\n\nBegin with a question, not a stack.\n\nMost projects begin before anyone knows exactly what they are building. There is a question to investigate, a workflow that feels awkward, a dataset that might explain something, or a report that needs to exist. Choosing a framework is often not the first useful decision.\n\nStarter gives that early work a home. The initial brief names an intended outcome. A handful of folders separate context, working material, and deliverables. The rest can emerge through use. A research project does not inherit an application shell; a small feature experiment does not need the architecture of a platform.\n\nThe same principle applies once the work becomes substantial. Add a folder when it has something to hold. Add a dependency when it enables a real check or capability. Keep the first result small enough that someone can inspect it and decide what should happen next.\n\nThe environment is part of the work.\n\nA capable agent still needs to know what success means, where the relevant information lives, and how to observe the result of an action. When any of those are missing, repeating the instruction is unlikely to fix the underlying problem.\n\nThat is the useful idea behind harness engineering: improve the environment around the agent. In the OpenAI account, that includes tools for running and observing an application, repository knowledge, automated checks, and review loops. The specific environment matters. Its results cannot be transferred to a new repository by copying a directory tree.\n\nFor Starter, the smaller translation is a working agreement. What are we trying to achieve? What inputs and tools are available? What is in scope? What evidence would establish a useful result? These belong in the brief or current plan, where both a person and the next agent can find them.\n\nGive the agent a map.\n\nA repository can contain more context than any single task needs. Loading all of it at once makes the important parts harder to find. A short entry document is useful precisely because it does not try to be the entire manual.\n\nAGENTS.md points to the sources of truth: the brief for intent, architecture for boundaries, plans for current work, and quality records for evidence and gaps. Claude uses the same map through CLAUDE.md. More detailed documents are read when the task calls for them.\n\nThis is progressive disclosure applied to project knowledge. It also creates a practical maintenance question: if an agent needs to know something, where would it look? A decision that exists only in an old conversation is difficult to recover. Capture its durable part in the repository, with a link to the evidence that supports it.\n\nRead what the task needs.\n\nThe entry map stays short. The repository holds the detail. The agent retrieves it as the work calls for it.\n\nContext, work, and evidence are different things.\n\nAn input is not a conclusion. An experiment is not an accepted result. A successful build is not proof that a user can complete the intended task. Keeping these distinctions visible is more useful than giving every artifact the same reassuring status.\n\nIn the scaffold, data holds source provenance, analysis holds reproducible investigation, and docs holds maintained intent and decisions. Reports, presentations, and other outputs have their own homes. Code gets a location when it exists. Variants can sit alongside one another without making every version look authoritative.\n\nThe pattern extends beyond software. A data analysis needs checks on grain, units, missing values, and joins. Research needs traceable claims and conflicting evidence. A presentation needs to be rendered and inspected. The method of verification changes; the responsibility to verify does not.\n\nMake the feedback loop explicit.\n\nThe default workflow is short: inspect, act, verify, review, finish. Inspect the baseline before changing it. Make a focused change. Check the actual result. Compare it with the brief. Then leave useful knowledge behind.\n\nVerification has to reach the place where the work is consumed. Source inspection may reveal an implementation error, but it cannot establish that an interface works at a narrow width. A syntactically valid query may still join at the wrong grain. A polished paragraph may still make a claim its source cannot support.\n\nWhen a check fails, use the evidence to choose the next action. If repeated attempts reveal the same missing capability or decision, make that gap explicit instead of retrying unchanged steps. A good handoff explains the state, the evidence, and what would allow progress. Confidence is not a substitute for any of them.\n\nInspect\nAct\nVerify\nReview\nFinish\nWhat do we know? What is still missing?\n\nRead the brief, inspect the current artifact, and establish a baseline.\n\nThe question + the current state\nRepeat when a check reveals a problem. Stop an unproductive loop and make the missing evidence or decision visible.\nBe precise about boundaries. Leave freedom inside them.\n\nNot every preference needs a rule, and not every rule needs a script. Start with the constraints that protect the meaning of the work: original inputs stay intact, sensitive data stays out of Git, important claims retain provenance, and a change respects its agreed scope.\n\nWhen a failure repeats, an executable check may be the smallest lasting fix. It might validate an input schema, prevent a forbidden dependency, or catch a misleading export. Good failure messages explain how to repair the problem. The purpose is to reduce recurring friction, not to accumulate a library of hypothetical safeguards.\n\nStarter applies that idea to itself. Its reusable template is an explicit boundary. The generator reads project defaults from template/, rather than copying the website’s documentation. Regression tests check that distribution content does not enter a generated project. That is a real invariant with a small, concrete test.\n\nMore agents need clearer ownership.\n\nParallel work is useful when the outcomes can progress independently. It is less useful when several agents edit the same artifact, rely on different assumptions, or produce conclusions that no one integrates.\n\nFor substantial shared work, a plan names the outcome, input paths, write scopes, and acceptance checks. One integrating agent owns the combined result and shared indexes. Workers return changed artifacts, evidence, limitations, and a next action. Separate worktrees are an option when concurrent code edits need isolation, not a ritual for every task.\n\nThe same arrangement supports work across time. A later session should be able to resume from the brief, current plan, and evidence without reconstructing the original conversation. That is a more useful measure of a handoff than its length.\n\nAutonomy follows evidence and authority.\n\nThe OpenAI article describes a software environment in which agents can carry changes through increasingly complete development loops. That depends on accessible tools, meaningful feedback, recovery paths, and the authority to perform the actions involved.\n\nStarter provides conventions for that loop. It does not grant permission to publish, merge, deploy, spend money, or send messages. Nor does it install an orchestration service. Local work that is already authorized should continue without unnecessary checkpoints; a genuinely missing decision should be surfaced clearly.\n\nSmall, reviewable changes make feedback and correction easier. They do not justify bypassing a material failure. A structural documentation check can establish that files and links are present. It cannot establish factual accuracy or guarantee that a future agent follows the workflow.\n\nLeave the project easier to return to.\n\nAgents learn from the patterns already present in a repository, including the misleading ones. A small inconsistency can become the next example. Maintenance is therefore part of finishing a result, not merely a future cleanup project.\n\nCompare the guidance you touched with the behavior you observed. Remove an obsolete instruction. Record a useful decision. Turn a recurring correction into a better example or a focused check. If nothing useful was learned, there is no need to manufacture a new rule.\n\nThe scaffold includes a weekly structural documentation check. Semantic review remains a working habit: at completion, at a milestone, or when drift appears. A scheduled reviewing agent can be added when recurring work justifies one, with clear scope and ownership. A minimal starter should make that possible without making it mandatory.\n\nA foundation, not a finished system.\n\nThe website, the scaffold tooling, and the generated project are separate things. You can read the explanation here, use the shared skill or generator to create a project, and then choose the capabilities the actual work requires.\n\nThe result is intentionally modest: a brief, a map, places for the work, and a way to record what has been checked. What matters next is the first real task. Can another person or agent find the intent? Can the result be reproduced or inspected? Is the remaining uncertainty clear?\n\nThose questions are the point of Starter. The repository grows well when the answers get easier to find.\n\nSources & further reading.\n\nThe distinction throughout this essay is between the source ideas, Starter’s implementation, and outcomes that still require observation.\n\nHarness engineering\nRyan Lopopolo · OpenAI · February 2026\nHarness engineering reference collection\nBackground, interpretations, and source material\nThe section-by-section review\nSource diagrams, adaptations, and implementation limits\nThe project template\nThe files and conventions new projects receive\nPut the idea to work.\n\nStart with a question. Make a small result. Leave the project better informed.\n\nCreate your first project",
+    "blocks": [
+      {
+        "tag": "H1",
+        "text": "The project is\npart of the prompt.",
+        "section": ""
+      },
+      {
+        "tag": "P",
+        "text": "A small foundation for working with agents—and a way to keep the intent, evidence, and learning close to the work.",
+        "section": ""
+      },
+      {
+        "tag": "DIV",
+        "text": "Tom Spencer\nSeptember 9, 2026\n7 min read",
+        "section": ""
+      },
+      {
+        "tag": "FIGCAPTION",
+        "text": "Context travels with the work.\nThe question, decisions, and constraints live in the repository, ready for the next session.",
+        "section": ""
+      },
+      {
+        "tag": "P",
+        "text": "A good project remembers why it exists, makes its work inspectable, and gives the next person—or agent—a useful place to begin.",
+        "section": ""
+      },
+      {
+        "tag": "P",
+        "text": "Starter is an attempt to make that easier. It draws on the ideas in Ryan Lopopolo’s harness engineering essay and adapts them to projects that may be much smaller, less settled, or not primarily about software at all.",
+        "section": ""
+      },
+      {
+        "tag": "H2",
+        "text": "Begin with a question, not a stack.",
+        "section": "a-place-to-begin"
+      },
+      {
+        "tag": "P",
+        "text": "Most projects begin before anyone knows exactly what they are building. There is a question to investigate, a workflow that feels awkward, a dataset that might explain something, or a report that needs to exist. Choosing a framework is often not the first useful decision.",
+        "section": "a-place-to-begin"
+      },
+      {
+        "tag": "P",
+        "text": "Starter gives that early work a home. The initial brief names an intended outcome. A handful of folders separate context, working material, and deliverables. The rest can emerge through use. A research project does not inherit an application shell; a small feature experiment does not need the architecture of a platform.",
+        "section": "a-place-to-begin"
+      },
+      {
+        "tag": "P",
+        "text": "The same principle applies once the work becomes substantial. Add a folder when it has something to hold. Add a dependency when it enables a real check or capability. Keep the first result small enough that someone can inspect it and decide what should happen next.",
+        "section": "a-place-to-begin"
+      },
+      {
+        "tag": "H2",
+        "text": "The environment is part of the work.",
+        "section": "the-environment"
+      },
+      {
+        "tag": "P",
+        "text": "A capable agent still needs to know what success means, where the relevant information lives, and how to observe the result of an action. When any of those are missing, repeating the instruction is unlikely to fix the underlying problem.",
+        "section": "the-environment"
+      },
+      {
+        "tag": "P",
+        "text": "That is the useful idea behind harness engineering: improve the environment around the agent. In the OpenAI account, that includes tools for running and observing an application, repository knowledge, automated checks, and review loops. The specific environment matters. Its results cannot be transferred to a new repository by copying a directory tree.",
+        "section": "the-environment"
+      },
+      {
+        "tag": "P",
+        "text": "For Starter, the smaller translation is a working agreement. What are we trying to achieve? What inputs and tools are available? What is in scope? What evidence would establish a useful result? These belong in the brief or current plan, where both a person and the next agent can find them.",
+        "section": "the-environment"
+      },
+      {
+        "tag": "H2",
+        "text": "Give the agent a map.",
+        "section": "a-map"
+      },
+      {
+        "tag": "P",
+        "text": "A repository can contain more context than any single task needs. Loading all of it at once makes the important parts harder to find. A short entry document is useful precisely because it does not try to be the entire manual.",
+        "section": "a-map"
+      },
+      {
+        "tag": "P",
+        "text": "AGENTS.md points to the sources of truth: the brief for intent, architecture for boundaries, plans for current work, and quality records for evidence and gaps. Claude uses the same map through CLAUDE.md. More detailed documents are read when the task calls for them.",
+        "section": "a-map"
+      },
+      {
+        "tag": "P",
+        "text": "This is progressive disclosure applied to project knowledge. It also creates a practical maintenance question: if an agent needs to know something, where would it look? A decision that exists only in an old conversation is difficult to recover. Capture its durable part in the repository, with a link to the evidence that supports it.",
+        "section": "a-map"
+      },
+      {
+        "tag": "STRONG",
+        "text": "Read what the task needs.",
+        "section": "a-map"
+      },
+      {
+        "tag": "P",
+        "text": "The entry map stays short. The repository holds the detail. The agent retrieves it as the work calls for it.",
+        "section": "a-map"
+      },
+      {
+        "tag": "H2",
+        "text": "Context, work, and evidence are different things.",
+        "section": "different-kinds-of-work"
+      },
+      {
+        "tag": "P",
+        "text": "An input is not a conclusion. An experiment is not an accepted result. A successful build is not proof that a user can complete the intended task. Keeping these distinctions visible is more useful than giving every artifact the same reassuring status.",
+        "section": "different-kinds-of-work"
+      },
+      {
+        "tag": "P",
+        "text": "In the scaffold, data holds source provenance, analysis holds reproducible investigation, and docs holds maintained intent and decisions. Reports, presentations, and other outputs have their own homes. Code gets a location when it exists. Variants can sit alongside one another without making every version look authoritative.",
+        "section": "different-kinds-of-work"
+      },
+      {
+        "tag": "P",
+        "text": "The pattern extends beyond software. A data analysis needs checks on grain, units, missing values, and joins. Research needs traceable claims and conflicting evidence. A presentation needs to be rendered and inspected. The method of verification changes; the responsibility to verify does not.",
+        "section": "different-kinds-of-work"
+      },
+      {
+        "tag": "H2",
+        "text": "Make the feedback loop explicit.",
+        "section": "the-loop"
+      },
+      {
+        "tag": "P",
+        "text": "The default workflow is short: inspect, act, verify, review, finish. Inspect the baseline before changing it. Make a focused change. Check the actual result. Compare it with the brief. Then leave useful knowledge behind.",
+        "section": "the-loop"
+      },
+      {
+        "tag": "P",
+        "text": "Verification has to reach the place where the work is consumed. Source inspection may reveal an implementation error, but it cannot establish that an interface works at a narrow width. A syntactically valid query may still join at the wrong grain. A polished paragraph may still make a claim its source cannot support.",
+        "section": "the-loop"
+      },
+      {
+        "tag": "P",
+        "text": "When a check fails, use the evidence to choose the next action. If repeated attempts reveal the same missing capability or decision, make that gap explicit instead of retrying unchanged steps. A good handoff explains the state, the evidence, and what would allow progress. Confidence is not a substitute for any of them.",
+        "section": "the-loop"
+      },
+      {
+        "tag": "H3",
+        "text": "What do we know? What is still missing?",
+        "section": "the-loop"
+      },
+      {
+        "tag": "P",
+        "text": "Read the brief, inspect the current artifact, and establish a baseline.",
+        "section": "the-loop"
+      },
+      {
+        "tag": "FIGCAPTION",
+        "text": "Repeat when a check reveals a problem. Stop an unproductive loop and make the missing evidence or decision visible.",
+        "section": "the-loop"
+      },
+      {
+        "tag": "H2",
+        "text": "Be precise about boundaries. Leave freedom inside them.",
+        "section": "boundaries"
+      },
+      {
+        "tag": "P",
+        "text": "Not every preference needs a rule, and not every rule needs a script. Start with the constraints that protect the meaning of the work: original inputs stay intact, sensitive data stays out of Git, important claims retain provenance, and a change respects its agreed scope.",
+        "section": "boundaries"
+      },
+      {
+        "tag": "P",
+        "text": "When a failure repeats, an executable check may be the smallest lasting fix. It might validate an input schema, prevent a forbidden dependency, or catch a misleading export. Good failure messages explain how to repair the problem. The purpose is to reduce recurring friction, not to accumulate a library of hypothetical safeguards.",
+        "section": "boundaries"
+      },
+      {
+        "tag": "P",
+        "text": "Starter applies that idea to itself. Its reusable template is an explicit boundary. The generator reads project defaults from template/, rather than copying the website’s documentation. Regression tests check that distribution content does not enter a generated project. That is a real invariant with a small, concrete test.",
+        "section": "boundaries"
+      },
+      {
+        "tag": "H2",
+        "text": "More agents need clearer ownership.",
+        "section": "working-together"
+      },
+      {
+        "tag": "P",
+        "text": "Parallel work is useful when the outcomes can progress independently. It is less useful when several agents edit the same artifact, rely on different assumptions, or produce conclusions that no one integrates.",
+        "section": "working-together"
+      },
+      {
+        "tag": "P",
+        "text": "For substantial shared work, a plan names the outcome, input paths, write scopes, and acceptance checks. One integrating agent owns the combined result and shared indexes. Workers return changed artifacts, evidence, limitations, and a next action. Separate worktrees are an option when concurrent code edits need isolation, not a ritual for every task.",
+        "section": "working-together"
+      },
+      {
+        "tag": "P",
+        "text": "The same arrangement supports work across time. A later session should be able to resume from the brief, current plan, and evidence without reconstructing the original conversation. That is a more useful measure of a handoff than its length.",
+        "section": "working-together"
+      },
+      {
+        "tag": "H2",
+        "text": "Autonomy follows evidence and authority.",
+        "section": "autonomy"
+      },
+      {
+        "tag": "P",
+        "text": "The OpenAI article describes a software environment in which agents can carry changes through increasingly complete development loops. That depends on accessible tools, meaningful feedback, recovery paths, and the authority to perform the actions involved.",
+        "section": "autonomy"
+      },
+      {
+        "tag": "P",
+        "text": "Starter provides conventions for that loop. It does not grant permission to publish, merge, deploy, spend money, or send messages. Nor does it install an orchestration service. Local work that is already authorized should continue without unnecessary checkpoints; a genuinely missing decision should be surfaced clearly.",
+        "section": "autonomy"
+      },
+      {
+        "tag": "P",
+        "text": "Small, reviewable changes make feedback and correction easier. They do not justify bypassing a material failure. A structural documentation check can establish that files and links are present. It cannot establish factual accuracy or guarantee that a future agent follows the workflow.",
+        "section": "autonomy"
+      },
+      {
+        "tag": "H2",
+        "text": "Leave the project easier to return to.",
+        "section": "maintenance"
+      },
+      {
+        "tag": "P",
+        "text": "Agents learn from the patterns already present in a repository, including the misleading ones. A small inconsistency can become the next example. Maintenance is therefore part of finishing a result, not merely a future cleanup project.",
+        "section": "maintenance"
+      },
+      {
+        "tag": "P",
+        "text": "Compare the guidance you touched with the behavior you observed. Remove an obsolete instruction. Record a useful decision. Turn a recurring correction into a better example or a focused check. If nothing useful was learned, there is no need to manufacture a new rule.",
+        "section": "maintenance"
+      },
+      {
+        "tag": "P",
+        "text": "The scaffold includes a weekly structural documentation check. Semantic review remains a working habit: at completion, at a milestone, or when drift appears. A scheduled reviewing agent can be added when recurring work justifies one, with clear scope and ownership. A minimal starter should make that possible without making it mandatory.",
+        "section": "maintenance"
+      },
+      {
+        "tag": "H2",
+        "text": "A foundation, not a finished system.",
+        "section": "start-small"
+      },
+      {
+        "tag": "P",
+        "text": "The website, the scaffold tooling, and the generated project are separate things. You can read the explanation here, use the shared skill or generator to create a project, and then choose the capabilities the actual work requires.",
+        "section": "start-small"
+      },
+      {
+        "tag": "P",
+        "text": "The result is intentionally modest: a brief, a map, places for the work, and a way to record what has been checked. What matters next is the first real task. Can another person or agent find the intent? Can the result be reproduced or inspected? Is the remaining uncertainty clear?",
+        "section": "start-small"
+      },
+      {
+        "tag": "P",
+        "text": "Those questions are the point of Starter. The repository grows well when the answers get easier to find.",
+        "section": "start-small"
+      },
+      {
+        "tag": "H2",
+        "text": "Sources & further reading.",
+        "section": "sources"
+      },
+      {
+        "tag": "P",
+        "text": "The distinction throughout this essay is between the source ideas, Starter’s implementation, and outcomes that still require observation.",
+        "section": "sources"
+      },
+      {
+        "tag": "A",
+        "text": "Harness engineering\nRyan Lopopolo · OpenAI · February 2026",
+        "section": "sources"
+      },
+      {
+        "tag": "A",
+        "text": "Harness engineering reference collection\nBackground, interpretations, and source material",
+        "section": "sources"
+      },
+      {
+        "tag": "A",
+        "text": "The section-by-section review\nSource diagrams, adaptations, and implementation limits",
+        "section": "sources"
+      },
+      {
+        "tag": "A",
+        "text": "The project template\nThe files and conventions new projects receive",
+        "section": "sources"
+      },
+      {
+        "tag": "H2",
+        "text": "Put the idea to work.",
+        "section": ""
+      },
+      {
+        "tag": "P",
+        "text": "Start with a question. Make a small result. Leave the project better informed.",
+        "section": ""
+      },
+      {
+        "tag": "A",
+        "text": "Create your first project",
+        "section": ""
+      }
+    ]
+  },
+  "atlas": [
+    "The project, made legible\nA question\nWhat are we trying\nto understand?\nContext\nBrief · decisions · sources\nWork\nBuild · analyze · write\nEvidence\nCheck · review · retain\nLeave the next run better informed\nContext travels with the work.\nThe question, decisions, and constraints live in the repository, ready for the next session.",
+    "The project, made legible\nA question\nWhat are we trying\nto understand?\nContext\nBrief · decisions · sources\nWork\nBuild · analyze · write\nEvidence\nCheck · review · retain\nLeave the next run better informed\nMake room for the real work.\nCode, analysis, reports, and presentations get a home. The project chooses its tools as it grows.",
+    "The project, made legible\nA question\nWhat are we trying\nto understand?\nContext\nBrief · decisions · sources\nWork\nBuild · analyze · write\nEvidence\nCheck · review · retain\nLeave the next run better informed\nKeep what you can verify.\nRecord the result, how it was checked, and what remains uncertain. Feed useful learning back into the project."
+  ],
+  "loop": [
+    "Inspect\nAct\nVerify\nReview\nFinish\nWhat do we know? What is still missing?\n\nRead the brief, inspect the current artifact, and establish a baseline.\n\nThe question + the current state\nRepeat when a check reveals a problem. Stop an unproductive loop and make the missing evidence or decision visible.",
+    "Inspect\nAct\nVerify\nReview\nFinish\nCode, analysis, a report, or an experiment.\n\nMake the smallest coherent change within the agreed scope.\n\nA focused change or experiment\nRepeat when a check reveals a problem. Stop an unproductive loop and make the missing evidence or decision visible.",
+    "Inspect\nAct\nVerify\nReview\nFinish\nRun it. Inspect it. Trace it to the source.\n\nCheck the result where it will be used. Keep the method and its limits.\n\nAn observed result, with evidence\nRepeat when a check reveals a problem. Stop an unproductive loop and make the missing evidence or decision visible.",
+    "Inspect\nAct\nVerify\nReview\nFinish\nDoes the result answer the actual question?\n\nCompare the result with the brief. Resolve actionable failures; surface real blockers.\n\nA finding, correction, or decision\nRepeat when a check reveals a problem. Stop an unproductive loop and make the missing evidence or decision visible.",
+    "Inspect\nAct\nVerify\nReview\nFinish\nWhat should the next run know?\n\nUpdate the useful knowledge and leave the next session a clear place to begin.\n\nA decision and a useful handoff\nRepeat when a check reveals a problem. Stop an unproductive loop and make the missing evidence or decision visible."
+  ]
+}

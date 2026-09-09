@@ -11,6 +11,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from check_docs import check
 from scaffold import KINDS, install_skills, scaffold
 
+SOURCE = Path(__file__).resolve().parents[1]
+
 
 class StarterTests(unittest.TestCase):
     def setUp(self):
@@ -33,6 +35,27 @@ class StarterTests(unittest.TestCase):
                 for absent in (".git", "skills", "tests", "src", "apps", "package.json",
                                "scripts/scaffold.py", "vercel.json", ".github/workflows/starter.yml"):
                     self.assertFalse((project / absent).exists(), absent)
+
+    def test_template_boundary_and_portable_workflow(self):
+        project = self.project()
+        self.assertEqual(check(SOURCE / "template"), [])
+        self.assertEqual((project / "scripts/check_docs.py").read_bytes(),
+                         (SOURCE / "template/scripts/check_docs.py").read_bytes())
+        self.assertIn("docs/WORKFLOW.md", (project / "AGENTS.md").read_text())
+        self.assertIn("@AGENTS.md", (project / "CLAUDE.md").read_text())
+        self.assertTrue((project / "docs/WORKFLOW.md").is_file())
+        for relative in ("template", "reports/harness-workflow-review.md",
+                         "docs/product-specs/starter-objective.md", "data/raw"):
+            self.assertFalse((project / relative).exists(), relative)
+        for relative in ("ARCHITECTURE.md", "docs/references/skills-and-plugins.md",
+                         "docs/references/harness-engineering.md"):
+            prose = (project / relative).read_text()
+            for leak in ("src/app/", "starter.tomspencer.co", "--install-skills",
+                         "data/raw/openai-harness-engineering.pdf"):
+                self.assertNotIn(leak, prose, relative)
+        brief = (project / "docs/product-specs/project-brief.md").read_text()
+        self.assertIn("## Working agreement", brief)
+        self.assertIn("Evidence", brief)
 
     def test_existing_work_and_symlinks_are_preserved(self):
         project = self.root / "existing"

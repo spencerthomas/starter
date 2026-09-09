@@ -1,44 +1,23 @@
 # Architecture
 
-The project has three boundaries: maintained knowledge in `docs/`, working material in `analysis/` and `data/`, and deliverables in `reports/`, `presentations/`, and `outputs/`. Code gets a home when it exists.
+This repository distributes a starter. Its website and descriptions are separate from the project content it generates.
 
-```text
-AGENTS.md                    agent map
-CLAUDE.md                    imports the same map
-ARCHITECTURE.md               this file
-docs/
-  design-docs/
-    index.md
-    core-beliefs.md
-  exec-plans/
-    active/
-    completed/
-    tech-debt-tracker.md
-  generated/
-  product-specs/
-    index.md
-  references/
-  DESIGN.md
-  FRONTEND.md
-  PLANS.md
-  PRODUCT_SENSE.md
-  QUALITY_SCORE.md
-  RELIABILITY.md
-  SECURITY.md
-analysis/
-data/
-reports/
-presentations/
-outputs/
-scripts/                     small repeatable checks and utilities
-```
+| Boundary | Ownership |
+| --- | --- |
+| [template/](template/) | Portable project defaults: docs, work folders, agent instructions, documentation checker and CI |
+| [scripts/scaffold.py](scripts/scaffold.py), [skills/start-project/](skills/start-project/) | Deliver the template and tailor the README, brief, and catalogs |
+| [src/app/](src/app/), [src/components/](src/components/) | Next.js overview, essay, getting-started guide, and interactive diagrams; root npm and Vercel config serve this site |
+| [docs/](docs/), [reports/](reports/), [data/](data/) | Distribution intent, decisions, assessments, and source provenance |
+| [tests/](tests/), [.github/workflows/](.github/workflows/) | Distribution verification, including generated-project portability and isolation |
 
-Inputs flow from `data/` through reproducible work in `analysis/` into deliverables. Methods, decisions, and evidence links live in `docs/`. Do not promote a source assertion or an experimental result to accepted knowledge without verification.
+The generator reads an explicit allowlist from `template/`, stages a new project, tailors its brief, validates it, and copies it into an empty target. It preserves an existing `.git/` and refuses existing work. It never copies root docs, website code, package dependencies, reports, or the source PDF. No Git initialization, package installation, publication, or remote changes occur.
 
-Create `src/` for one codebase. Use `apps/<name>/` for multiple independently runnable applications and `packages/` only once shared code exists. Each runnable variant owns its dependencies, run command, and checks. Document actual dependency boundaries here once known; this starter imposes no language or framework.
+The canonical documentation checker lives in `template/scripts/check_docs.py`. The root `scripts/check_docs.py` delegates to it with the distribution root as default. Generated projects receive the standalone implementation. CI checks both knowledge bases; there is no second checker implementation to synchronize.
 
-Generated schemas and inventories belong in `docs/generated/`, with the producer, input version, and regeneration command. There is no database schema until there is a database.
+Generated-project architecture is defined in [the template architecture](template/ARCHITECTURE.md). It preserves the required docs layout and homes for analysis, data, reports, presentations, and outputs. It adds code folders and actual dependency boundaries only when needed. One [portable work loop](template/docs/WORKFLOW.md) is routed through AGENTS.md and Claude's import; it is an instruction contract, not an installed runtime hook.
 
-The starter distribution additionally contains `skills/start-project/`, `scripts/scaffold.py`, a Claude plugin manifest, and scaffold tests. Generated projects receive the documentation check and its CI workflow; they do not inherit the starter distribution tooling or its tests.
+The website remains at its existing build location; it has no API, database, or authentication. Keeping one repository avoids a separate template release/synchronization process. GitHub's template button copies the distribution, so the generator or shared skill is the recommended creation path.
 
-The distribution's landing page lives in `src/app/`, with one small Motion Primitives adaptation in `src/components/`. Next.js renders the content on the server; only the animation wrapper is a client component. There is no API, database, or authentication. The generator excludes this website, its package manifest, and Vercel configuration.
+See the [adopted decision](docs/design-docs/template-and-workflow.md) and [article review](reports/harness-workflow-review.md) for rationale and evidence.
+
+Website routes live in `src/app/`. Shared navigation, copy controls, and interactive diagrams live in `src/components/site/`; the small button/tabs primitives live in `src/components/ui/`. Project examples and essay content live in `src/lib/`. Website visual rules live in [design](docs/DESIGN.md), with behavior and validation in [frontend](docs/FRONTEND.md). These do not alter template defaults.

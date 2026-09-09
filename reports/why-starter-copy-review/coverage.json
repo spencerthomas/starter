@@ -1,0 +1,662 @@
+{
+  "body_sections": 10,
+  "body_paragraphs": 30,
+  "body_sentences": 112,
+  "additional_units": 90,
+  "paragraphs": [
+    {
+      "id": "1.P1",
+      "text": "Most projects begin before anyone knows exactly what they are building. There is a question to investigate, a workflow that feels awkward, a dataset that might explain something, or a report that needs to exist. Choosing a framework is often not the first useful decision.",
+      "sentences": [
+        "Most projects begin before anyone knows exactly what they are building.",
+        "There is a question to investigate, a workflow that feels awkward, a dataset that might explain something, or a report that needs to exist.",
+        "Choosing a framework is often not the first useful decision."
+      ]
+    },
+    {
+      "id": "1.P2",
+      "text": "Starter gives that early work a home. The initial brief names an intended outcome. A handful of folders separate context, working material, and deliverables. The rest can emerge through use. A research project does not inherit an application shell; a small feature experiment does not need the architecture of a platform.",
+      "sentences": [
+        "Starter gives that early work a home.",
+        "The initial brief names an intended outcome.",
+        "A handful of folders separate context, working material, and deliverables.",
+        "The rest can emerge through use.",
+        "A research project does not inherit an application shell; a small feature experiment does not need the architecture of a platform."
+      ]
+    },
+    {
+      "id": "1.P3",
+      "text": "The same principle applies once the work becomes substantial. Add a folder when it has something to hold. Add a dependency when it enables a real check or capability. Keep the first result small enough that someone can inspect it and decide what should happen next.",
+      "sentences": [
+        "The same principle applies once the work becomes substantial.",
+        "Add a folder when it has something to hold.",
+        "Add a dependency when it enables a real check or capability.",
+        "Keep the first result small enough that someone can inspect it and decide what should happen next."
+      ]
+    },
+    {
+      "id": "2.P1",
+      "text": "A capable agent still needs to know what success means, where the relevant information lives, and how to observe the result of an action. When any of those are missing, repeating the instruction is unlikely to fix the underlying problem.",
+      "sentences": [
+        "A capable agent still needs to know what success means, where the relevant information lives, and how to observe the result of an action.",
+        "When any of those are missing, repeating the instruction is unlikely to fix the underlying problem."
+      ]
+    },
+    {
+      "id": "2.P2",
+      "text": "That is the useful idea behind harness engineering: improve the environment around the agent. In the OpenAI account, that includes tools for running and observing an application, repository knowledge, automated checks, and review loops. The specific environment matters. Its results cannot be transferred to a new repository by copying a directory tree.",
+      "sentences": [
+        "That is the useful idea behind harness engineering: improve the environment around the agent.",
+        "In the OpenAI account, that includes tools for running and observing an application, repository knowledge, automated checks, and review loops.",
+        "The specific environment matters.",
+        "Its results cannot be transferred to a new repository by copying a directory tree."
+      ]
+    },
+    {
+      "id": "2.P3",
+      "text": "For Starter, the smaller translation is a working agreement. What are we trying to achieve? What inputs and tools are available? What is in scope? What evidence would establish a useful result? These belong in the brief or current plan, where both a person and the next agent can find them.",
+      "sentences": [
+        "For Starter, the smaller translation is a working agreement.",
+        "What are we trying to achieve?",
+        "What inputs and tools are available?",
+        "What is in scope?",
+        "What evidence would establish a useful result?",
+        "These belong in the brief or current plan, where both a person and the next agent can find them."
+      ]
+    },
+    {
+      "id": "3.P1",
+      "text": "A repository can contain more context than any single task needs. Loading all of it at once makes the important parts harder to find. A short entry document is useful precisely because it does not try to be the entire manual.",
+      "sentences": [
+        "A repository can contain more context than any single task needs.",
+        "Loading all of it at once makes the important parts harder to find.",
+        "A short entry document is useful precisely because it does not try to be the entire manual."
+      ]
+    },
+    {
+      "id": "3.P2",
+      "text": "AGENTS.md points to the sources of truth: the brief for intent, architecture for boundaries, plans for current work, and quality records for evidence and gaps. Claude uses the same map through CLAUDE.md. More detailed documents are read when the task calls for them.",
+      "sentences": [
+        "AGENTS.md points to the sources of truth: the brief for intent, architecture for boundaries, plans for current work, and quality records for evidence and gaps.",
+        "Claude uses the same map through CLAUDE.md.",
+        "More detailed documents are read when the task calls for them."
+      ]
+    },
+    {
+      "id": "3.P3",
+      "text": "This is progressive disclosure applied to project knowledge. It also creates a practical maintenance question: if an agent needs to know something, where would it look? A decision that exists only in an old conversation is difficult to recover. Capture its durable part in the repository, with a link to the evidence that supports it.",
+      "sentences": [
+        "This is progressive disclosure applied to project knowledge.",
+        "It also creates a practical maintenance question: if an agent needs to know something, where would it look?",
+        "A decision that exists only in an old conversation is difficult to recover.",
+        "Capture its durable part in the repository, with a link to the evidence that supports it."
+      ]
+    },
+    {
+      "id": "4.P1",
+      "text": "An input is not a conclusion. An experiment is not an accepted result. A successful build is not proof that a user can complete the intended task. Keeping these distinctions visible is more useful than giving every artifact the same reassuring status.",
+      "sentences": [
+        "An input is not a conclusion.",
+        "An experiment is not an accepted result.",
+        "A successful build is not proof that a user can complete the intended task.",
+        "Keeping these distinctions visible is more useful than giving every artifact the same reassuring status."
+      ]
+    },
+    {
+      "id": "4.P2",
+      "text": "In the scaffold, data holds source provenance, analysis holds reproducible investigation, and docs holds maintained intent and decisions. Reports, presentations, and other outputs have their own homes. Code gets a location when it exists. Variants can sit alongside one another without making every version look authoritative.",
+      "sentences": [
+        "In the scaffold, data holds source provenance, analysis holds reproducible investigation, and docs holds maintained intent and decisions.",
+        "Reports, presentations, and other outputs have their own homes.",
+        "Code gets a location when it exists.",
+        "Variants can sit alongside one another without making every version look authoritative."
+      ]
+    },
+    {
+      "id": "4.P3",
+      "text": "The pattern extends beyond software. A data analysis needs checks on grain, units, missing values, and joins. Research needs traceable claims and conflicting evidence. A presentation needs to be rendered and inspected. The method of verification changes; the responsibility to verify does not.",
+      "sentences": [
+        "The pattern extends beyond software.",
+        "A data analysis needs checks on grain, units, missing values, and joins.",
+        "Research needs traceable claims and conflicting evidence.",
+        "A presentation needs to be rendered and inspected.",
+        "The method of verification changes; the responsibility to verify does not."
+      ]
+    },
+    {
+      "id": "5.P1",
+      "text": "The default workflow is short: inspect, act, verify, review, finish. Inspect the baseline before changing it. Make a focused change. Check the actual result. Compare it with the brief. Then leave useful knowledge behind.",
+      "sentences": [
+        "The default workflow is short: inspect, act, verify, review, finish.",
+        "Inspect the baseline before changing it.",
+        "Make a focused change.",
+        "Check the actual result.",
+        "Compare it with the brief.",
+        "Then leave useful knowledge behind."
+      ]
+    },
+    {
+      "id": "5.P2",
+      "text": "Verification has to reach the place where the work is consumed. Source inspection may reveal an implementation error, but it cannot establish that an interface works at a narrow width. A syntactically valid query may still join at the wrong grain. A polished paragraph may still make a claim its source cannot support.",
+      "sentences": [
+        "Verification has to reach the place where the work is consumed.",
+        "Source inspection may reveal an implementation error, but it cannot establish that an interface works at a narrow width.",
+        "A syntactically valid query may still join at the wrong grain.",
+        "A polished paragraph may still make a claim its source cannot support."
+      ]
+    },
+    {
+      "id": "5.P3",
+      "text": "When a check fails, use the evidence to choose the next action. If repeated attempts reveal the same missing capability or decision, make that gap explicit instead of retrying unchanged steps. A good handoff explains the state, the evidence, and what would allow progress. Confidence is not a substitute for any of them.",
+      "sentences": [
+        "When a check fails, use the evidence to choose the next action.",
+        "If repeated attempts reveal the same missing capability or decision, make that gap explicit instead of retrying unchanged steps.",
+        "A good handoff explains the state, the evidence, and what would allow progress.",
+        "Confidence is not a substitute for any of them."
+      ]
+    },
+    {
+      "id": "6.P1",
+      "text": "Not every preference needs a rule, and not every rule needs a script. Start with the constraints that protect the meaning of the work: original inputs stay intact, sensitive data stays out of Git, important claims retain provenance, and a change respects its agreed scope.",
+      "sentences": [
+        "Not every preference needs a rule, and not every rule needs a script.",
+        "Start with the constraints that protect the meaning of the work: original inputs stay intact, sensitive data stays out of Git, important claims retain provenance, and a change respects its agreed scope."
+      ]
+    },
+    {
+      "id": "6.P2",
+      "text": "When a failure repeats, an executable check may be the smallest lasting fix. It might validate an input schema, prevent a forbidden dependency, or catch a misleading export. Good failure messages explain how to repair the problem. The purpose is to reduce recurring friction, not to accumulate a library of hypothetical safeguards.",
+      "sentences": [
+        "When a failure repeats, an executable check may be the smallest lasting fix.",
+        "It might validate an input schema, prevent a forbidden dependency, or catch a misleading export.",
+        "Good failure messages explain how to repair the problem.",
+        "The purpose is to reduce recurring friction, not to accumulate a library of hypothetical safeguards."
+      ]
+    },
+    {
+      "id": "6.P3",
+      "text": "Starter applies that idea to itself. Its reusable template is an explicit boundary. The generator reads project defaults from template/, rather than copying the website’s documentation. Regression tests check that distribution content does not enter a generated project. That is a real invariant with a small, concrete test.",
+      "sentences": [
+        "Starter applies that idea to itself.",
+        "Its reusable template is an explicit boundary.",
+        "The generator reads project defaults from template/, rather than copying the website’s documentation.",
+        "Regression tests check that distribution content does not enter a generated project.",
+        "That is a real invariant with a small, concrete test."
+      ]
+    },
+    {
+      "id": "7.P1",
+      "text": "Parallel work is useful when the outcomes can progress independently. It is less useful when several agents edit the same artifact, rely on different assumptions, or produce conclusions that no one integrates.",
+      "sentences": [
+        "Parallel work is useful when the outcomes can progress independently.",
+        "It is less useful when several agents edit the same artifact, rely on different assumptions, or produce conclusions that no one integrates."
+      ]
+    },
+    {
+      "id": "7.P2",
+      "text": "For substantial shared work, a plan names the outcome, input paths, write scopes, and acceptance checks. One integrating agent owns the combined result and shared indexes. Workers return changed artifacts, evidence, limitations, and a next action. Separate worktrees are an option when concurrent code edits need isolation, not a ritual for every task.",
+      "sentences": [
+        "For substantial shared work, a plan names the outcome, input paths, write scopes, and acceptance checks.",
+        "One integrating agent owns the combined result and shared indexes.",
+        "Workers return changed artifacts, evidence, limitations, and a next action.",
+        "Separate worktrees are an option when concurrent code edits need isolation, not a ritual for every task."
+      ]
+    },
+    {
+      "id": "7.P3",
+      "text": "The same arrangement supports work across time. A later session should be able to resume from the brief, current plan, and evidence without reconstructing the original conversation. That is a more useful measure of a handoff than its length.",
+      "sentences": [
+        "The same arrangement supports work across time.",
+        "A later session should be able to resume from the brief, current plan, and evidence without reconstructing the original conversation.",
+        "That is a more useful measure of a handoff than its length."
+      ]
+    },
+    {
+      "id": "8.P1",
+      "text": "The OpenAI article describes a software environment in which agents can carry changes through increasingly complete development loops. That depends on accessible tools, meaningful feedback, recovery paths, and the authority to perform the actions involved.",
+      "sentences": [
+        "The OpenAI article describes a software environment in which agents can carry changes through increasingly complete development loops.",
+        "That depends on accessible tools, meaningful feedback, recovery paths, and the authority to perform the actions involved."
+      ]
+    },
+    {
+      "id": "8.P2",
+      "text": "Starter provides conventions for that loop. It does not grant permission to publish, merge, deploy, spend money, or send messages. Nor does it install an orchestration service. Local work that is already authorized should continue without unnecessary checkpoints; a genuinely missing decision should be surfaced clearly.",
+      "sentences": [
+        "Starter provides conventions for that loop.",
+        "It does not grant permission to publish, merge, deploy, spend money, or send messages.",
+        "Nor does it install an orchestration service.",
+        "Local work that is already authorized should continue without unnecessary checkpoints; a genuinely missing decision should be surfaced clearly."
+      ]
+    },
+    {
+      "id": "8.P3",
+      "text": "Small, reviewable changes make feedback and correction easier. They do not justify bypassing a material failure. A structural documentation check can establish that files and links are present. It cannot establish factual accuracy or guarantee that a future agent follows the workflow.",
+      "sentences": [
+        "Small, reviewable changes make feedback and correction easier.",
+        "They do not justify bypassing a material failure.",
+        "A structural documentation check can establish that files and links are present.",
+        "It cannot establish factual accuracy or guarantee that a future agent follows the workflow."
+      ]
+    },
+    {
+      "id": "9.P1",
+      "text": "Agents learn from the patterns already present in a repository, including the misleading ones. A small inconsistency can become the next example. Maintenance is therefore part of finishing a result, not merely a future cleanup project.",
+      "sentences": [
+        "Agents learn from the patterns already present in a repository, including the misleading ones.",
+        "A small inconsistency can become the next example.",
+        "Maintenance is therefore part of finishing a result, not merely a future cleanup project."
+      ]
+    },
+    {
+      "id": "9.P2",
+      "text": "Compare the guidance you touched with the behavior you observed. Remove an obsolete instruction. Record a useful decision. Turn a recurring correction into a better example or a focused check. If nothing useful was learned, there is no need to manufacture a new rule.",
+      "sentences": [
+        "Compare the guidance you touched with the behavior you observed.",
+        "Remove an obsolete instruction.",
+        "Record a useful decision.",
+        "Turn a recurring correction into a better example or a focused check.",
+        "If nothing useful was learned, there is no need to manufacture a new rule."
+      ]
+    },
+    {
+      "id": "9.P3",
+      "text": "The scaffold includes a weekly structural documentation check. Semantic review remains a working habit: at completion, at a milestone, or when drift appears. A scheduled reviewing agent can be added when recurring work justifies one, with clear scope and ownership. A minimal starter should make that possible without making it mandatory.",
+      "sentences": [
+        "The scaffold includes a weekly structural documentation check.",
+        "Semantic review remains a working habit: at completion, at a milestone, or when drift appears.",
+        "A scheduled reviewing agent can be added when recurring work justifies one, with clear scope and ownership.",
+        "A minimal starter should make that possible without making it mandatory."
+      ]
+    },
+    {
+      "id": "10.P1",
+      "text": "The website, the scaffold tooling, and the generated project are separate things. You can read the explanation here, use the shared skill or generator to create a project, and then choose the capabilities the actual work requires.",
+      "sentences": [
+        "The website, the scaffold tooling, and the generated project are separate things.",
+        "You can read the explanation here, use the shared skill or generator to create a project, and then choose the capabilities the actual work requires."
+      ]
+    },
+    {
+      "id": "10.P2",
+      "text": "The result is intentionally modest: a brief, a map, places for the work, and a way to record what has been checked. What matters next is the first real task. Can another person or agent find the intent? Can the result be reproduced or inspected? Is the remaining uncertainty clear?",
+      "sentences": [
+        "The result is intentionally modest: a brief, a map, places for the work, and a way to record what has been checked.",
+        "What matters next is the first real task.",
+        "Can another person or agent find the intent?",
+        "Can the result be reproduced or inspected?",
+        "Is the remaining uncertainty clear?"
+      ]
+    },
+    {
+      "id": "10.P3",
+      "text": "Those questions are the point of Starter. The repository grows well when the answers get easier to find.",
+      "sentences": [
+        "Those questions are the point of Starter.",
+        "The repository grows well when the answers get easier to find."
+      ]
+    }
+  ],
+  "additional": [
+    {
+      "id": "F01",
+      "text": "The project is part of the prompt."
+    },
+    {
+      "id": "F02",
+      "text": "A small foundation for working with agents—and a way to keep the intent, evidence, and learning close to the work."
+    },
+    {
+      "id": "F03",
+      "text": "Tom Spencer"
+    },
+    {
+      "id": "F04",
+      "text": "September 9, 2026"
+    },
+    {
+      "id": "F05",
+      "text": "7 min read"
+    },
+    {
+      "id": "F06",
+      "text": "The project is part of the prompt — Starter"
+    },
+    {
+      "id": "F07",
+      "text": "An essay on repository knowledge, observable work, and a smaller application of harness engineering."
+    },
+    {
+      "id": "F08",
+      "text": "In this essay"
+    },
+    {
+      "id": "I01",
+      "text": "A good project remembers why it exists, makes its work inspectable, and gives the next person—or agent—a useful place to begin."
+    },
+    {
+      "id": "I02",
+      "text": "Starter is an attempt to make that easier."
+    },
+    {
+      "id": "I03",
+      "text": "It draws on the ideas in Ryan Lopopolo’s harness engineering essay and adapts them to projects that may be much smaller, less settled, or not primarily about software at all."
+    },
+    {
+      "id": "C01",
+      "text": "Read what the task needs."
+    },
+    {
+      "id": "C02",
+      "text": "The entry map stays short."
+    },
+    {
+      "id": "C03",
+      "text": "The repository holds the detail."
+    },
+    {
+      "id": "C04",
+      "text": "The agent retrieves it as the work calls for it."
+    },
+    {
+      "id": "D01",
+      "text": "The project, made legible"
+    },
+    {
+      "id": "D02",
+      "text": "Select a part to explore"
+    },
+    {
+      "id": "D03",
+      "text": "A question"
+    },
+    {
+      "id": "D04",
+      "text": "What are we trying to understand?"
+    },
+    {
+      "id": "D05",
+      "text": "Context"
+    },
+    {
+      "id": "D06",
+      "text": "Brief · decisions · sources"
+    },
+    {
+      "id": "D07",
+      "text": "Work"
+    },
+    {
+      "id": "D08",
+      "text": "Build · analyze · write"
+    },
+    {
+      "id": "D09",
+      "text": "Evidence"
+    },
+    {
+      "id": "D10",
+      "text": "Check · review · retain"
+    },
+    {
+      "id": "D11",
+      "text": "Leave the next run better informed"
+    },
+    {
+      "id": "D12",
+      "text": "Context travels with the work."
+    },
+    {
+      "id": "D13",
+      "text": "The question, decisions, and constraints live in the repository, ready for the next session."
+    },
+    {
+      "id": "D14",
+      "text": "A working convention"
+    },
+    {
+      "id": "D15",
+      "text": "Make room for the real work."
+    },
+    {
+      "id": "D16",
+      "text": "Code, analysis, reports, and presentations get a home."
+    },
+    {
+      "id": "D17",
+      "text": "The project chooses its tools as it grows."
+    },
+    {
+      "id": "D18",
+      "text": "Keep what you can verify."
+    },
+    {
+      "id": "D19",
+      "text": "Record the result, how it was checked, and what remains uncertain."
+    },
+    {
+      "id": "D20",
+      "text": "Feed useful learning back into the project."
+    },
+    {
+      "id": "D21",
+      "text": "Question → context → work → evidence → context (visual relationship, no literal sentence)"
+    },
+    {
+      "id": "L1T",
+      "text": "Inspect"
+    },
+    {
+      "id": "L1H1",
+      "text": "What do we know?"
+    },
+    {
+      "id": "L1H2",
+      "text": "What is still missing?"
+    },
+    {
+      "id": "L1P1",
+      "text": "Read the brief, inspect the current artifact, and establish a baseline."
+    },
+    {
+      "id": "L1A",
+      "text": "The question + the current state"
+    },
+    {
+      "id": "L2T",
+      "text": "Act"
+    },
+    {
+      "id": "L2H1",
+      "text": "Code, analysis, a report, or an experiment."
+    },
+    {
+      "id": "L2P1",
+      "text": "Make the smallest coherent change within the agreed scope."
+    },
+    {
+      "id": "L2A",
+      "text": "A focused change or experiment"
+    },
+    {
+      "id": "L3T",
+      "text": "Verify"
+    },
+    {
+      "id": "L3H1",
+      "text": "Run it."
+    },
+    {
+      "id": "L3H2",
+      "text": "Inspect it."
+    },
+    {
+      "id": "L3H3",
+      "text": "Trace it to the source."
+    },
+    {
+      "id": "L3P1",
+      "text": "Check the result where it will be used."
+    },
+    {
+      "id": "L3P2",
+      "text": "Keep the method and its limits."
+    },
+    {
+      "id": "L3A",
+      "text": "An observed result, with evidence"
+    },
+    {
+      "id": "L4T",
+      "text": "Review"
+    },
+    {
+      "id": "L4H1",
+      "text": "Does the result answer the actual question?"
+    },
+    {
+      "id": "L4P1",
+      "text": "Compare the result with the brief."
+    },
+    {
+      "id": "L4P2",
+      "text": "Resolve actionable failures; surface real blockers."
+    },
+    {
+      "id": "L4A",
+      "text": "A finding, correction, or decision"
+    },
+    {
+      "id": "L5T",
+      "text": "Finish"
+    },
+    {
+      "id": "L5H1",
+      "text": "What should the next run know?"
+    },
+    {
+      "id": "L5P1",
+      "text": "Update the useful knowledge and leave the next session a clear place to begin."
+    },
+    {
+      "id": "L5A",
+      "text": "A decision and a useful handoff"
+    },
+    {
+      "id": "L6A",
+      "text": "Repeat when a check reveals a problem."
+    },
+    {
+      "id": "L6B",
+      "text": "Stop an unproductive loop and make the missing evidence or decision visible."
+    },
+    {
+      "id": "S01",
+      "text": "Sources & further reading."
+    },
+    {
+      "id": "S02",
+      "text": "The distinction throughout this essay is between the source ideas, Starter’s implementation, and outcomes that still require observation."
+    },
+    {
+      "id": "S03",
+      "text": "Harness engineering"
+    },
+    {
+      "id": "S04",
+      "text": "Ryan Lopopolo · OpenAI · February 2026"
+    },
+    {
+      "id": "S05",
+      "text": "Harness engineering reference collection"
+    },
+    {
+      "id": "S06",
+      "text": "Background, interpretations, and source material"
+    },
+    {
+      "id": "S07",
+      "text": "The section-by-section review"
+    },
+    {
+      "id": "S08",
+      "text": "Source diagrams, adaptations, and implementation limits"
+    },
+    {
+      "id": "S09",
+      "text": "The project template"
+    },
+    {
+      "id": "S10",
+      "text": "The files and conventions new projects receive"
+    },
+    {
+      "id": "Z01",
+      "text": "Put the idea to work."
+    },
+    {
+      "id": "Z02",
+      "text": "Start with a question."
+    },
+    {
+      "id": "Z03",
+      "text": "Make a small result."
+    },
+    {
+      "id": "Z04",
+      "text": "Leave the project better informed."
+    },
+    {
+      "id": "Z05",
+      "text": "Create your first project"
+    },
+    {
+      "id": "N01",
+      "text": "Skip to content"
+    },
+    {
+      "id": "N02",
+      "text": "Starter"
+    },
+    {
+      "id": "N03",
+      "text": "Overview"
+    },
+    {
+      "id": "N04",
+      "text": "The idea"
+    },
+    {
+      "id": "N05",
+      "text": "Get started"
+    },
+    {
+      "id": "N06",
+      "text": "GitHub"
+    },
+    {
+      "id": "N07",
+      "text": "A small foundation."
+    },
+    {
+      "id": "N08",
+      "text": "Room for the work to grow."
+    },
+    {
+      "id": "N09",
+      "text": "Start a project"
+    },
+    {
+      "id": "N10",
+      "text": "Explore the repository"
+    },
+    {
+      "id": "N11",
+      "text": "Made by Tom Spencer"
+    },
+    {
+      "id": "N12",
+      "text": "For code, analysis, and knowledge work."
+    }
+  ]
+}

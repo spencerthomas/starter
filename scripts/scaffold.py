@@ -13,6 +13,7 @@ from check_docs import REQUIRED_DIRS, REQUIRED_FILES, check
 
 
 SOURCE = Path(__file__).resolve().parents[1]
+TEMPLATE = SOURCE / "template"
 KINDS = {
     "general": (
         "Define the audience and the smallest useful deliverable.",
@@ -54,7 +55,7 @@ Starting point: **{kind}**. See the [project brief](docs/product-specs/project-b
 
 ## Working here
 
-Read [AGENTS.md](AGENTS.md) and [ARCHITECTURE.md](ARCHITECTURE.md). The maintained knowledge base lives in [docs/](docs/). Keep working analysis in [analysis/](analysis/), inputs and provenance in [data/](data/), and deliverables in [reports/](reports/), [presentations/](presentations/), or [outputs/](outputs/).
+Read [AGENTS.md](AGENTS.md), [ARCHITECTURE.md](ARCHITECTURE.md), and the [working loop](docs/WORKFLOW.md). The maintained knowledge base lives in [docs/](docs/). Keep working analysis in [analysis/](analysis/), inputs and provenance in [data/](data/), and deliverables in [reports/](reports/), [presentations/](presentations/), or [outputs/](outputs/).
 
 Add code folders, dependencies, and run commands when implementation begins. No application stack is selected yet.
 
@@ -79,8 +80,8 @@ def scaffold(destination, name, kind, brief, dry_run=False):
         raise ValueError("brief must be non-empty")
     files = (*REQUIRED_FILES, *EXTRA_FILES)
     for relative in files:
-        if not (SOURCE / relative).is_file():
-            raise ValueError(f"starter source missing {relative}; use the complete checkout")
+        if not (TEMPLATE / relative).is_file():
+            raise ValueError(f"starter template missing {relative}; use the complete checkout")
     if dry_run:
         print(f"Would create {kind} project {name!r} at {destination}")
         print("\n".join(sorted((*files, "docs/product-specs/project-brief.md", *REQUIRED_DIRS))))
@@ -92,17 +93,11 @@ def scaffold(destination, name, kind, brief, dry_run=False):
         for relative in files:
             target = stage / relative
             target.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(SOURCE / relative, target)
+            shutil.copyfile(TEMPLATE / relative, target)
         for relative in REQUIRED_DIRS:
             (stage / relative).mkdir(parents=True, exist_ok=True)
             (stage / relative / ".gitkeep").touch()
         (stage / "README.md").write_text(project_readme(name, kind, brief), encoding="utf-8")
-        (stage / "docs/FRONTEND.md").write_text(
-            "# Frontend\n\nNot applicable until the project has a user interface.\n\n"
-            "When one exists, document its location, run command, key journeys, and design conventions here. "
-            "Check the rendered interface, keyboard access, relevant states, and narrow screens.\n",
-            encoding="utf-8",
-        )
         guidance, evidence = KINDS[kind]
         project_brief = f"""# {name}
 
@@ -123,6 +118,13 @@ Establish the first useful result. Technology choices, datasets, and additional 
 ## Acceptance evidence
 
 {evidence}
+
+## Working agreement
+
+- Scope: the intended outcome above; local preparation only unless broader actions are authorized.
+- Inputs and tools: identify available sources and existing capabilities before substantive work.
+- Evidence: replace this line with the concrete command or inspection that will establish the first useful result; record results and limits here.
+- Recovery: follow the [working loop](../WORKFLOW.md); surface missing access, evidence, or decisions instead of repeating an unchanged failure.
 
 ## Open questions
 

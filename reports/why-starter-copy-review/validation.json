@@ -1,0 +1,12 @@
+{
+  "body_paragraphs_match_render": 30,
+  "body_sentences_reconstruct_exactly": 112,
+  "additional_units": 90,
+  "rendered_blocks_covered": 60,
+  "missing_units": [],
+  "local_report_links": "pass",
+  "source_anchors": "pass",
+  "implementation_unchanged": true,
+  "behavior_tests": "7 pass, run during review",
+  "scope": "copy review; no fresh-agent acceptance trial"
+}
