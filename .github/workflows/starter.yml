@@ -11,3 +11,10 @@ jobs:
         with:
           python-version: '3.12'
       - run: python3 -m unittest discover -s tests
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm run typecheck

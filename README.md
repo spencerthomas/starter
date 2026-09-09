@@ -2,6 +2,8 @@
 
 A small home for code, analysis, and knowledge work. Start with a question and grow the structure as the work becomes real.
 
+[starter.tomspencer.co](https://starter.tomspencer.co) is the one-page introduction.
+
 ## Start a project
 
 Point Codex or Claude at this repository:
@@ -53,6 +55,8 @@ Explicit invocation: `$start-project` in Codex or `/start-project` in Claude. Fo
 Add `src/` for one codebase, or `apps/<name>/` when independent apps actually exist. Reports and presentations already have homes; don't duplicate them under outputs. Name experimental variants by purpose, then record which one was selected.
 
 ## Keep it healthy
+
+The landing page uses Next.js and Motion Primitives. Run it with `npm ci` then `npm run dev`; verify with `npm run build` and `npm run typecheck`. It deploys through the existing Vercel project from `main`. The scaffold command excludes the website and its dependencies from generated projects.
 
 ```sh
 python3 scripts/check_docs.py

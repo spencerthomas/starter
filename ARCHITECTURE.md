@@ -40,3 +40,5 @@ Create `src/` for one codebase. Use `apps/<name>/` for multiple independently ru
 Generated schemas and inventories belong in `docs/generated/`, with the producer, input version, and regeneration command. There is no database schema until there is a database.
 
 The starter distribution additionally contains `skills/start-project/`, `scripts/scaffold.py`, a Claude plugin manifest, and scaffold tests. Generated projects receive the documentation check and its CI workflow; they do not inherit the starter distribution tooling or its tests.
+
+The distribution's landing page lives in `src/app/`, with one small Motion Primitives adaptation in `src/components/`. Next.js renders the content on the server; only the animation wrapper is a client component. There is no API, database, or authentication. The generator excludes this website, its package manifest, and Vercel configuration.

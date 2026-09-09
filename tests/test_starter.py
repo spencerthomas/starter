@@ -29,8 +29,9 @@ class StarterTests(unittest.TestCase):
                                         cwd=self.root, capture_output=True, text=True)
                 self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
                 self.assertIn("Answer a real question.", (project / "README.md").read_text())
+                self.assertIn("Not applicable", (project / "docs/FRONTEND.md").read_text())
                 for absent in (".git", "skills", "tests", "src", "apps", "package.json",
-                               "scripts/scaffold.py", ".github/workflows/starter.yml"):
+                               "scripts/scaffold.py", "vercel.json", ".github/workflows/starter.yml"):
                     self.assertFalse((project / absent).exists(), absent)
 
     def test_existing_work_and_symlinks_are_preserved(self):

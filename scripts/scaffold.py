@@ -97,6 +97,12 @@ def scaffold(destination, name, kind, brief, dry_run=False):
             (stage / relative).mkdir(parents=True, exist_ok=True)
             (stage / relative / ".gitkeep").touch()
         (stage / "README.md").write_text(project_readme(name, kind, brief), encoding="utf-8")
+        (stage / "docs/FRONTEND.md").write_text(
+            "# Frontend\n\nNot applicable until the project has a user interface.\n\n"
+            "When one exists, document its location, run command, key journeys, and design conventions here. "
+            "Check the rendered interface, keyboard access, relevant states, and narrow screens.\n",
+            encoding="utf-8",
+        )
         guidance, evidence = KINDS[kind]
         project_brief = f"""# {name}
 
