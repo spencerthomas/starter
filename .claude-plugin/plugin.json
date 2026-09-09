@@ -1,0 +1,7 @@
+{
+  "name": "starter",
+  "version": "0.1.0",
+  "description": "Minimal harness-informed scaffolding for code, analysis, and knowledge work.",
+  "author": { "name": "Tom Spencer" },
+  "repository": "https://github.com/spencerthomas/starter"
+}
